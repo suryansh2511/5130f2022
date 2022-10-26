@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IWS_Assignment_3</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+</head>
+<body>
+
+    <br><h1>Tell Mr. Suryansh more about youself. He needs to know about you for his IWS Assignment 3.</h1>
+
+    <form action="" id="contactForm">
+
+        <label for="name"> Name </label>
+        <input type="text" id="name" placeholder="Suryansh Kumar Pathak">
+
+        <label for="email"> Email </label>
+        <input type="text" id="email" placeholder="abc@email.com">
+        
+        <label for="message">What would you like to tell about yourself?</label>
+        <textarea id="message" placeholder="Please write about yourself."></textarea>
+
+        <label for="type">Type</label>
+        <select id="type">
+            <option value="1">Not from UML</option>
+            <option value="2">UML Staff</option>
+            <option value="3" selected>UML Student</option>
+        </select>
+
+        <fieldset>
+            <legend>Gender</legend>
+
+            <label>
+                <input type="radio" id="gender" value="1">
+                Male
+            </label>
+            <br>
+            <label>
+                <input type="radio" id="gender" value="2">
+                Female
+            </label>
+        </fieldset>
+
+        Upload Image
+        <input type="file" id="file" >
+
+        <div class="inputBox">
+            <button type="submit">Submit</button>
+        </div>
+
+    </form> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
+
+</body>
+</html>
