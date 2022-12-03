@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Customised Report</title>
+
+        <link rel="stylesheet" href="report.css">
+            
+    <script type="text/javascript">
+  
+      function fn1( )
+      {
+        var usecase = document.getElementById("usecase")
+        var picker = document.getElementById("picker")      
+        var avg = document.getElementById("avg");
+        var budget = document.getElementById("budget");
+        var location = document.getElementById("location")
+
+       if (usecase.value=='basic') {
+
+        if ((picker.value=='no') || ((picker.value=='yes')&&(avg.value == "less")) || ((picker.value=="yes")&&(avg.value=="medium")) ||((picker.value=='yes')&&(avg.value=="max")&&(location.value=="city")) || ((picker.value=="yes")&& (avg.value=="medium")&&(location.value=="suburb")&&(budget.value=="fancy")) || ((picker.value=="yes")&& (avg.value=="medium")&&(location.value=="suburb")&&(budget.value=="luxury")) || ((picker.value=="yes")&& (avg.value=="max")&&(location.value=="suburb")&&(budget.value=="fancy")) || ((picker.value=="yes")&& (avg.value=="max")&&(location.value=="suburb")&&(budget.value=="luxury")) )
+        alert("EV is meant for you")
+       }
+
+   
+       else{
+        alert(" Please reconsider your decison of switching to EV")
+       }
+
+
+
+       if (usecase.value=="long"){
+
+        if ((budget.value=="fancy")&&(budget.value=="luxury")){
+          alert("EV is  meant for you")
+        }
+
+        if ((budget.value=="less")&& (budget.value=="medium")){
+          alert("Please reconsider your decison of switching to EV")
+        }
+       }
+
+
+
+
+      }
+      
+      </script>
+    </head>
+    <body>
+        
+        <div id="navbar">
+            <ul class="Main">
+            
+      
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="Decision-Factors.html">FACTORS </a></li>
+              <li><a href="report.html">CUSTOMIZED REPORT</a></li>
+            
+              <li class=><a href="index.html">LOGIN</a></li>
+              <li class=><a href="signup.html">SIGN UP</a></li>
+            </ul>
+          </div>
+            <h3> Hello {{USERNAME}}, welcome to the customsied report section of our tool. Please answer a quick questionnaire below and our tool will help you decide if buying an electric vehicle is the right option for you or not. </h3>
+        
+            <form > 
+           <h4> What is your primary purpose of owning a car?</h4>
+          <select name="Usecase" id="usecase" class="hover" >
+              <option value="basic"> General daily use in the city  </option>
+              <option value="long"> Long Drives </option>
+          </select>
+          <h4> Is the electric vehicle going to be your primary or only car?</h4>
+          
+         
+          <select name="picker" id="picker" class="hover">
+              <option value="yes"> YES </option>
+              <option value="no"> NO </option>
+          </select>
+          <h4> Average Miles Driven Per Day</h4>
+
+            <select name="Average" id="avg" class="hover" >
+              <option value="less"> &#60; 50 </option>
+              <option value="medium">&#62;  50  & &#60; 100  </option>
+              <option value="max"> &#62;  100   </option>
+               
+            
+            </select>
+
+            <h4> How much are you willing to spend on the car?</h4>
+
+            <select name="budget" id="budget" class="hover" >
+                <option value="less" >&#60; 50k$ </option> 
+                <option value="medium">&#62;  50k$   & &#60; 75k$  </option>
+                <option value="fancy">&#62;  75k$  & &#60; 100k$  </option> 
+                <option value="luxury">&#62; 100k$  </option> 
+
+            </select>
+            <h4> What is your location?</h4>
+            <select name="location" id="location" class="hover">
+              <option value="city"> Metropolitan City</option>
+              <option value="suburb">Suburb</option>
+          </select>
+
+          <input type="submit" onclick="fn1(  )"  id="submit" value="Submit"  />
+   
+      
+      
+
+        </form>
+    
+    </body>
+</html>
